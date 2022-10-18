@@ -1,6 +1,6 @@
 # 🍎 Swift와 친해지기
-| Day | 푼 문제 | What I Learned |
-| ------ | -- |----------- |
+| Day |  푼 문제  | What I Learned |
+| ------ | ---- |----------- |
 | 22.10.11 | ☑️ | iOS 기초, H.I.G를 통한 컴포넌트의 이해, 화면 전환 |
 | 22.10.12 | ☑️ | Autolayout을 통한 기초 UI구성, Scroll View의 이해 |
 | 22.10.13 | ☑️ | TableView, CollectionView, 데이터 전달 방식 |
