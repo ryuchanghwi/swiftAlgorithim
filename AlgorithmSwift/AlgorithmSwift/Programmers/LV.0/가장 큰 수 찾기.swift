@@ -29,3 +29,5 @@ func solution(_ array:[Int]) -> [Int] {
  array.max() - 배열 중 가장 큰 값 찾는 메서드
  array.index(of: ) - 배열 안에 특정 값의 인덱스를 찾는 메서드
  */
+
+[1, 2, 4].reduce(<#T##Result#>, <#T##(Result, Self.Element) -> Result#>)
