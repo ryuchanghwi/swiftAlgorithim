@@ -17,3 +17,5 @@ func solution(_ x:Int) -> Bool {
     let result : Bool = x % sumInt == 0 ? true : false
     return result
 }
+
+
