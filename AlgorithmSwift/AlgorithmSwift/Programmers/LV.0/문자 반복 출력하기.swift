@@ -1,0 +1,13 @@
+//
+//  문자 반복 출력하기.swift
+//  AlgorithmSwift
+//
+//  Created by 류창휘 on 2022/10/28.
+//
+
+import Foundation
+func solution(_ my_string:String, _ n:Int) -> String {
+    return my_string.map { value in
+        String(repeating: String(value), count: n)
+    }.reduce("", +)
+}

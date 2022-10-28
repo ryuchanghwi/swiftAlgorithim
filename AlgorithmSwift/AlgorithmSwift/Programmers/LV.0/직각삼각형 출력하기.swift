@@ -1,0 +1,12 @@
+//
+//  직각삼각형 출력하기.swift
+//  AlgorithmSwift
+//
+//  Created by 류창휘 on 2022/10/28.
+//
+
+import Foundation
+let n = readLine()!.components(separatedBy: [" "]).map { Int($0)! }
+for i in 1...n[0] {
+    print(String(repeating: "*", count: i))
+}

@@ -19,7 +19,7 @@ import Foundation
 //    print(intArray)
 //    return []
 //}
-
+//
 //func solution(_ quiz:[String]) -> [String] {
 //    var resultArray = [String]()
 //    var quizValue = quiz.map { value in
