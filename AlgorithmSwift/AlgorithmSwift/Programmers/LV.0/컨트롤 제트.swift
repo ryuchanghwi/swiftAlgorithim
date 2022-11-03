@@ -55,7 +55,6 @@ func solution(_ s:String) -> Int {
             sumArray.removeLast()
             //Z이전의 값 제거
             sumArray.removeLast()
-
         }
     }
     return sumArray.map { value in
