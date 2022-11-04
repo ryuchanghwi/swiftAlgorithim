@@ -1,5 +1,56 @@
 # 🍎 Swift와 친해지기
-🍎 Swift와 친해지기
+
+
+### Swift 자주 사용하는 메서드 정리
+<details markdown="1">
+<summary>✅ 배열의 첫 번째 요소 삭제 - removeFirst() , 배열의 마지막 요소 삭제 - removeLast() </summary>
+<pre>
+Array.removeFirst()
+- 배열과 같은 컬렉션의 첫 번째 요소를 삭제
+<br>
+Array.removeLast()
+- 배열과 같은 컬렉션의 마지막 요소를 삭제
+<br>
+*복잡도*
+removeFirst() - O(n)
+removeLast() - O(1)
+</pre>
+
+``` swift
+
+var bugs = ["Aphid", "Bumblebee", "Cicada", "Damselfly", "Earwig"]
+bugs.removeFirst()
+print(bugs)
+// Prints "["Bumblebee", "Cicada", "Damselfly", "Earwig"]"
+
+```
+
+</details>
+
+<details markdown="1">
+<summary>✅ 대문자 -> 소문자 - lowercased() , 소문자 -> 대문자 - uppercased()</summary>
+<pre>
+String.lowercased() 
+- String값을 소문자로 바꾸는 method
+<br>
+String.uppercased() 
+- String값을 대문자로 바꾸는 method
+<br>
+*복잡도*
+O(n)
+</pre>
+
+``` swift
+
+let cafe = "Café 🍵"
+print(cafe.uppercased())
+// Prints "CAFÉ 🍵"
+
+```
+
+</details>
+
+### 문제 풀이 한줄 기록
 |   Day   |    푼 문제    |   What I Learned   |
 | ------ | ---- |----------- |
 | 22.11.05 | 1.7의 개수 | 1.[Int]에 Int값을 String으로 바꿔서 접근하는 방법을 연습함 |
