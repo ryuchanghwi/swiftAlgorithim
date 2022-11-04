@@ -2,6 +2,33 @@
 
 
 ### Swift 자주 사용하는 메서드 정리
+
+<details markdown="1">
+<summary>✅ 배열의 첫 번째 요소부터 k개 삭제 - removeFirst(_:) , 배열의 마지막 요소부터 k개 삭제 - removeLast(_:)</summary>
+<pre>
+Array.removeFirst(3)
+- 배열과 같은 컬렉션의 시작부터 특정 갯수의 요소들를 삭제하는 메서드
+<br>
+Array.removeLast(3)
+- 배열과 같은 걸렉션의 마지막부터 특정 갯수의 요소들을 삭제하는 메서드
+<br>
+*복잡도*
+removeFirst(_:) - O(n)
+removeLast(_:) - O(n)
+</pre>
+
+``` swift
+
+var bugs = ["Aphid", "Bumblebee", "Cicada", "Damselfly", "Earwig"]
+bugs.removeFirst(3)
+print(bugs)
+// Prints "["Damselfly", "Earwig"]"
+
+```
+
+</details>
+
+
 <details markdown="1">
 <summary>✅ 배열의 첫 번째 요소 삭제 - removeFirst() , 배열의 마지막 요소 삭제 - removeLast() </summary>
 <pre>
@@ -28,34 +55,12 @@ print(bugs)
 </details>
 
 <details markdown="1">
-<summary>✅ 배열의 첫 번째 요소 삭제 - removeFirst(_:) , 배열의 마지막 요소 삭제 - removeLast(_:)</summary>
-<pre>
-String.lowercased() 
-- String값을 소문자로 바꾸는 method
-<br>
-String.uppercased() 
-- String값을 대문자로 바꾸는 method
-<br>
-*복잡도*
-O(n)
-</pre>
-
-``` swift
-
-let cafe = "Café 🍵"
-print(cafe.uppercased())
-// Prints "CAFÉ 🍵"
-
-```
-</detail>
-
-<details markdown="1">
 <summary>✅ 대문자 -> 소문자 - lowercased() , 소문자 -> 대문자 - uppercased()</summary>
 <pre>
-String.lowercased() 
+String.lowercased()
 - String값을 소문자로 바꾸는 method
 <br>
-String.uppercased() 
+String.uppercased()
 - String값을 대문자로 바꾸는 method
 <br>
 *복잡도*
@@ -69,8 +74,10 @@ print(cafe.uppercased())
 // Prints "CAFÉ 🍵"
 
 ```
-
 </details>
+
+
+
 
 ### 문제 풀이 한줄 기록
 |   Day   |    푼 문제    |   What I Learned   |
@@ -109,8 +116,3 @@ print(cafe.uppercased())
 
 
 
-
-
-
-
-d
