@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 func solution(_ my_string:String, _ num1:Int, _ num2:Int) -> String {
     var stringArray = my_string.map { value in
         String(value)
