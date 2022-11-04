@@ -28,6 +28,28 @@ print(bugs)
 </details>
 
 <details markdown="1">
+<summary>✅ 배열의 첫 번째 요소 삭제 - removeFirst(_:) , 배열의 마지막 요소 삭제 - removeLast(_:)</summary>
+<pre>
+String.lowercased() 
+- String값을 소문자로 바꾸는 method
+<br>
+String.uppercased() 
+- String값을 대문자로 바꾸는 method
+<br>
+*복잡도*
+O(n)
+</pre>
+
+``` swift
+
+let cafe = "Café 🍵"
+print(cafe.uppercased())
+// Prints "CAFÉ 🍵"
+
+```
+</detail>
+
+<details markdown="1">
 <summary>✅ 대문자 -> 소문자 - lowercased() , 소문자 -> 대문자 - uppercased()</summary>
 <pre>
 String.lowercased() 
