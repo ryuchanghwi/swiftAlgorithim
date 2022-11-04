@@ -4,6 +4,32 @@
 ### Swift 자주 사용하는 메서드 정리
 
 <details markdown="1">
+<summary>✅ 최대 최소값 찾기 - max(), min() // todo </summary>
+<pre>
+Array.removeFirst(3)
+- 배열과 같은 컬렉션의 시작부터 특정 수의 요소들를 삭제하는 메서드
+<br>
+Array.removeLast(3)
+- 배열과 같은 걸렉션의 마지막부터 특정 개수의 요소들을 삭제하는 메서드
+<br>
+*복잡도*
+removeFirst(_:) - O(n) *n은 배열의 길이만큼*
+removeLast(_:) - O(k) *k는 제거하고자 하는 요소의 개수*
+</pre>
+
+``` swift
+
+var bugs = ["Aphid", "Bumblebee", "Cicada", "Damselfly", "Earwig"]
+bugs.removeFirst(3)
+print(bugs)
+// Prints "["Damselfly", "Earwig"]"
+
+```
+
+</details>
+
+
+<details markdown="1">
 <summary>✅ 배열의 첫 번째 요소부터 k개 삭제 - removeFirst(_:) , 배열의 마지막 요소부터 k개 삭제 - removeLast(_:)</summary>
 <pre>
 Array.removeFirst(3)
