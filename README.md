@@ -4,6 +4,35 @@
 ### Swift 자주 사용하는 메서드 정리
 
 <details markdown="1">
+<summary>✅ 배열에 값이 위치한 index 찾기 - firstIndex(of:), lastIndex(of:) </summary>
+<pre>
+Array.min)
+- 순서 안에서 가장 작은 값을 반환
+<br>
+Array.max()
+- 순서 안에서 가장 큰 값을 반환
+<br>
+*주의*
+- Element는 비교 가능해야 함
+- 반환값이 옵셔널임
+- 시퀀스 안에 값이 없다면, nil 반환
+<br>
+*복잡도*
+min() - O(n)
+max() - O(n) 
+</pre>
+
+``` swift
+let heights = [67.5, 65.7, 64.3, 61.1, 58.5, 60.3, 64.9]
+let greatestHeight = heights.max()
+print(greatestHeight)
+// Prints "Optional(67.5)"
+
+```
+
+</details>
+
+<details markdown="1">
 <summary>✅ 최대 최소값 찾기 - max(), min() </summary>
 <pre>
 Array.min)
