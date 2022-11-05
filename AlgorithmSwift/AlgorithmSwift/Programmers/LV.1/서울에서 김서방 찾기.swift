@@ -17,11 +17,11 @@ import Foundation
 
 
 //lastIndex(of:) 사용 O(n)
-//func solution(_ seoul:[String]) -> String {
-//    //김서방의 위치를 알아내는 변수
-//    let index = seoul.lastIndex(of: "Kim")! //반드시 "Kim"은 있기 때문에 강제 언레핑 ! 사용
-//    return "김서방은 \(index)에 있다"
-//}
+func solution(_ seoul:[String]) -> String {
+    //김서방의 위치를 알아내는 변수
+    let index = seoul.lastIndex(of: "Kim")! //반드시 "Kim"은 있기 때문에 강제 언레핑 ! 사용
+    return "김서방은 \(index)에 있다"
+}
 
 
 //firstIndex(of: )사용 O(n)
@@ -32,13 +32,13 @@ import Foundation
 //}
 
 //for문, contains tkdyd O(n)??
-func solution(_ seoul:[String]) -> String {
-    var index = 0
-    for i in seoul {
-        if i.contains("Kim") {
-            break
-        }
-        index += 1
-    }
-    return "김서방은 \(index)에 있다"
-}
+//func solution(_ seoul:[String]) -> String {
+//    var index = 0
+//    for i in seoul {
+//        if i.contains("Kim") {
+//            break
+//        }
+//        index += 1
+//    }
+//    return "김서방은 \(index)에 있다"
+//}
