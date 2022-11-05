@@ -1,28 +1,65 @@
 # 🍎 Swift와 친해지기
 
 
-### Swift 자주 사용하는 메서드 정리
+### 문제풀며 공부한 메서드 
 
 <details markdown="1">
-<summary>✅ 최대 최소값 찾기 - max(), min() // todo </summary>
+<summary>✅ 배열에 값이 위치한 index 찾기 - firstIndex(of:), lastIndex(of:) </summary>
 <pre>
-Array.removeFirst(3)
-- 배열과 같은 컬렉션의 시작부터 특정 수의 요소들를 삭제하는 메서드
+Array.firstIndex(of: )
+- 특정 값이 나타나는 첫 번쨰 인덱스 반환
 <br>
-Array.removeLast(3)
-- 배열과 같은 걸렉션의 마지막부터 특정 개수의 요소들을 삭제하는 메서드
+Array.lasgIndex(of: )
+- 특정 값이 나타나는 마지막 인덱스 반환
+<br>
+*주의*
+- 반환값이 옵셔널임
+- 컬렉션(배열) 안에 값이 없다면, nil 반환
 <br>
 *복잡도*
-removeFirst(_:) - O(n) *n은 배열의 길이만큼*
-removeLast(_:) - O(k) *k는 제거하고자 하는 요소의 개수*
+O(n)
 </pre>
 
 ``` swift
+var students = ["Ben", "Ivy", "Jordell", "Maxime"]
+if let i = students.firstIndex(of: "Maxime") { //"Maxime"이 요소인 index 찾기
+    students[i] = "Max" //해당 인덱스에 요소를 "Max"로 교체
+}
+print(students)
+// Prints "["Ben", "Ivy", "Jordell", "Max"]"
 
-var bugs = ["Aphid", "Bumblebee", "Cicada", "Damselfly", "Earwig"]
-bugs.removeFirst(3)
-print(bugs)
-// Prints "["Damselfly", "Earwig"]"
+let index1 = ["a", "a", "c", "d"].lastIndex(of: "a")
+print(index1) //Optional(1)
+let index2 = ["a", "a", "c", "d"].firstIndex(of: "a")
+print(index2) //Optional(0)
+```
+
+</details>
+
+<details markdown="1">
+<summary>✅ 최대 최소값 찾기 - max(), min() </summary>
+<pre>
+Array.min()
+- 순서 안에서 가장 작은 값을 반환
+<br>
+Array.max()
+- 순서 안에서 가장 큰 값을 반환
+<br>
+*주의*
+- Element는 비교 가능해야 함
+- 반환값이 옵셔널임
+- 시퀀스 안에 값이 없다면, nil 반환
+<br>
+*복잡도*
+min() - O(n)
+max() - O(n) 
+</pre>
+
+``` swift
+let heights = [67.5, 65.7, 64.3, 61.1, 58.5, 60.3, 64.9]
+let greatestHeight = heights.max()
+print(greatestHeight)
+// Prints "Optional(67.5)"
 
 ```
 
