@@ -35,7 +35,7 @@ print(greatestHeight)
 <details markdown="1">
 <summary>✅ 최대 최소값 찾기 - max(), min() </summary>
 <pre>
-Array.min)
+Array.min()
 - 순서 안에서 가장 작은 값을 반환
 <br>
 Array.max()
