@@ -1,7 +1,7 @@
 # 🍎 Swift와 친해지기
 
 
-### Swift 자주 사용하는 메서드 정리
+### 문제풀며 공부한 메서드 
 
 <details markdown="1">
 <summary>✅ 배열에 값이 위치한 index 찾기 - firstIndex(of:), lastIndex(of:) </summary>
