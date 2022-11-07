@@ -4,6 +4,35 @@
 ### 문제풀며 공부한 메서드 
 
 <details markdown="1">
+<summary>✅ 정렬(관계연산자로 표현할 수 있는 요소) - sorted() </summary>
+<pre>
+Array.sorted()
+String.sorted()
+- 관계 연산자로 표시할 수 있는 요소를 정렬해서 반환
+
+<br>
+*주의*
+- 반환시 [Self.Element] 형식
+- 문자열 값에 메서드를 적용해도 [Self.Element] 형식으로 반환된다.
+<br>
+*복잡도*
+O(n log n)
+</pre>
+
+``` swift
+let students: Set = ["Kofi", "Abena", "Peter", "Kweku", "Akosua"]
+let sortedStudents = students.sorted()
+print(sortedStudents)
+// Prints "["Abena", "Akosua", "Kofi", "Kweku", "Peter"]"
+
+let descendingStudents = students.sorted(by: >)
+print(descendingStudents)
+// Prints "["Peter", "Kweku", "Kofi", "Akosua", "Abena"]"
+```
+
+</details>
+
+<details markdown="1">
 <summary>✅ 배열에 값이 위치한 index 찾기 - firstIndex(of:), lastIndex(of:) </summary>
 <pre>
 Array.firstIndex(of: )
