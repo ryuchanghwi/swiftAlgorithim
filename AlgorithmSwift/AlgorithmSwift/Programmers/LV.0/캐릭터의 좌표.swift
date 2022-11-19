@@ -12,10 +12,10 @@ func solution(_ keyinput:[String], _ board:[Int]) -> [Int] {
     var upDownValue = 0
     var leftRightValue = 0
     for i in keyinput {
-        if i == "left" && abs(leftRightValue - 1) <= widthBoundary {
+        if i == "left" && abs(leftRightValue - 1) <= widthBoundary {// 4 4
             leftRightValue -= 1
         }
-        else if i == "right" && abs(leftRightValue + 1) <= widthBoundary {
+        else if i == "right" && abs(leftRightValue + 1) <= widthBoundary {// 4 4 3 4
             leftRightValue += 1
         }
         else if i == "up" && abs(upDownValue + 1) <= heightBoundary {
@@ -28,3 +28,9 @@ func solution(_ keyinput:[String], _ board:[Int]) -> [Int] {
 
     return [leftRightValue, upDownValue]
 }
+
+
+//-4, -3, -2, -1, 01, 2, 3, 4
+
+//(i < 3) // -2 -1 0 1 2
+//(i + 1) <= 3 //  -2 -1 0 1 2
