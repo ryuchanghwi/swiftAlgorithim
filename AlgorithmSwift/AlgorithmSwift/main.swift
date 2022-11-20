@@ -133,19 +133,72 @@ import Foundation
 
 
 
+// MARK: - 여기부터
+
+
+
+
+
+print(Int(3.3))
+/*
+ 1.두 수의 나눗셈
+ 몫과 나머지를 더한 후, * 1000
+ 그 값을 Int로 씌워주면??
+ 
+ 안됌
+ 
+ 그러면 int를 Double값으로 변환하고 나누면?? 됌
+ */
+//func solution(_ num1:Int, _ num2:Int) -> Int {
+//    let value = Double(num1) / Double(num2)
+//    return Int(value * 1000)
+//}
+
+/*
+ 1.두 정수 사이의 합
+ */
+//func solution(_ a:Int, _ b:Int) -> Int64 {
+//    var intValue = [a, b].sorted()
+//    return Int64((intValue[0]...intValue[1]).reduce(0, +))
+//}
+
+/*
+ 1.핸드폰 번호 가리기
+ */
+//func solution(_ phone_number:String) -> String {
+//    var result = phone_number.map { value in
+//        String(value)
+//    }
+//    let numberCount = phone_number.count
+//    for i in 0..<numberCount - 4 {
+//        result[i] = "*"
+//    }
+//    return result.reduce("", +)
+//}
+//다른 사람 풀이
+//func solution(_ phone_number:String) -> String {
+//    return String("\(String(repeating: "*", count: phone_number.count - 4))\(phone_number.suffix(4))")
+//}
 
 
 /*
- 1단계 나머지가 1이 되는 수 찾기
+ 1.나누어 떨어지는 숫자 배열
  */
-//func solution(_ n:Int) -> Int {
-//    let nMinusOne = n - 1
-//    var result = 0
-//    for i in 2...nMinusOne {
-//        if nMinusOne % i == 0 {
-//            result = i
-//            break
-//        }
-//    }
-//    return result
+//func solution(_ arr:[Int], _ divisor:Int) -> [Int] {
+//    var result = arr.filter { value in
+//        value %  divisor == 0
+//    }.sorted()
+//    return result.count == 0 ? [-1] : result
 //}
+/*
+ 1.제일 작은 수 제거하기
+ */
+//func solution(_ arr:[Int]) -> [Int] {
+//    let miniumValue = arr.sorted()[0]
+//    let miniumIndex = Int(arr.firstIndex { $0 == miniumValue }!)
+//    var arrValue = arr
+//    arrValue.remove(at: miniumIndex)
+//    return arrValue.count == 0 ? [-1] : arrValue
+//}
+
+
