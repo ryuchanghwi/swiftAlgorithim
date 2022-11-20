@@ -4,30 +4,36 @@
 ### 문제풀며 공부한 메서드 
 
 <details markdown="1">
-<summary>✅ suffix, prefix </summary>
+<summary>✅ 컬렉션의 최대 길이까지 서브시퀀스를 반환  suffix(_:), prefix(_:) </summary>
 <pre>
-Array.sorted()
-String.sorted()
-- 관계 연산자로 표시할 수 있는 요소를 정렬해서 반환
+Array.prefix(_ maxLength: Int)
+Array.suffix(_ maxLegnth : Int)
+- prefix는 쵀대 maxLength 요소로 컬렉션의 시작 부분부터 시작하는 시퀀스
+- suffix는 최대 maxLength 요소로  컬렉션의 끝 부분부터 시작하는 시퀀스
 
 <br>
 *주의*
-- 반환시 [Self.Element] 형식
-- 문자열 값에 메서드를 적용해도 [Self.Element] 형식으로 반환된다.
+- 파라미터인 maxLength는 반환할 최대 요소 수, 0보다 크거나 같아야함
+- 반환 타입은 Self.SubSequence, array로 덮어주거나 타입을 변환해줘야 사용하기가 편함
 <br>
 *복잡도*
-O(n log n)
+suffix(_:) - 컬렉션이 RandomAccessCollection을 따르는 경우 O(1), 아니면 O(K) k는 maxLength <br/>
+prefix(_:) - 컬렉션이 RandomAccessCollection을 따르는 경우 O(1), 아니면 O(K) k는 시작부분에서 선택할 요소의 수
+
 </pre>
 
 ``` swift
-let students: Set = ["Kofi", "Abena", "Peter", "Kweku", "Akosua"]
-let sortedStudents = students.sorted()
-print(sortedStudents)
-// Prints "["Abena", "Akosua", "Kofi", "Kweku", "Peter"]"
+let numbers = [1, 2, 3, 4, 5]
+print(numbers.suffix(2))
+// Prints "[4, 5]"
+print(numbers.suffix(10))
+// Prints "[1, 2, 3, 4, 5]"
 
-let descendingStudents = students.sorted(by: >)
-print(descendingStudents)
-// Prints "["Peter", "Kweku", "Kofi", "Akosua", "Abena"]"
+let numbers = [1, 2, 3, 4, 5]
+print(numbers.prefix(2))
+// Prints "[1, 2]"
+print(numbers.prefix(10))
+// Prints "[1, 2, 3, 4, 5]"
 ```
 
 </details>
