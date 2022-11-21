@@ -135,27 +135,8 @@ import Foundation
 
 // MARK: - 여기부터
 
-/*
- 1.두 정수 사이의 합
- */
-//func solution(_ a:Int, _ b:Int) -> Int64 {
-//    var intValue = [a, b].sorted()
-//    return Int64((intValue[0]...intValue[1]).reduce(0, +))
-//}
 
-/*
- 1.핸드폰 번호 가리기
- */
-//func solution(_ phone_number:String) -> String {
-//    var result = phone_number.map { value in
-//        String(value)
-//    }
-//    let numberCount = phone_number.count
-//    for i in 0..<numberCount - 4 {
-//        result[i] = "*"
-//    }
-//    return result.reduce("", +)
-//}
+
 //다른 사람 풀이
 //func solution(_ phone_number:String) -> String {
 //    return String("\(String(repeating: "*", count: phone_number.count - 4))\(phone_number.suffix(4))")
@@ -189,4 +170,39 @@ import Foundation
 
 //func solution(_ numbers:[Int]) -> Int {
 //    return (0...9).reduce(0, +) - numbers.reduce(0, +)
+//}
+
+/*
+ 1. 가운데 글자 가져오기
+ */
+//func solution(_ s:String) -> String {
+//    let sCount = s.count
+//    // 5일떄는 2, 7일떄는 3... s / 2 인덱스?
+//    // 4일떄는 1,2 6일때는 2,3 8일떄는 34 s / 2 -1, s/2
+//    let sArray = s.map { value in
+//        String(value)
+//    }
+//    return sCount % 2 == 0 ? sArray[sCount / 2 - 1]+sArray[sCount / 2] : sArray[sCount / 2]
+//}
+//다른 사람 풀이
+//func solution(_ s:String) -> String {
+//    if Array(s).count % 2 == 0 {
+//        return String(Array(s)[(s.count/2)-1...(s.count/2)])
+//    }else{
+//        return String(Array(s)[s.count/2])
+//    }
+//}
+
+
+/*
+ 2.최댓값과 최솟값
+ */
+//func solution(_ s:String) -> String {
+//    let minValue = s.components(separatedBy: " ").map { value in
+//        Int(value)!
+//    }.min()!
+//    let maxValue = s.components(separatedBy: " ").map { value in
+//        Int(value)!
+//    }.max()!
+//    return "\(minValue) \(maxValue)"
 //}
