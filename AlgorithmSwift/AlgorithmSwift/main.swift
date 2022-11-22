@@ -137,21 +137,10 @@ import Foundation
 
 
 
-//다른 사람 풀이
-//func solution(_ phone_number:String) -> String {
-//    return String("\(String(repeating: "*", count: phone_number.count - 4))\(phone_number.suffix(4))")
-//}
 
 
-/*
- 1.나누어 떨어지는 숫자 배열
- */
-//func solution(_ arr:[Int], _ divisor:Int) -> [Int] {
-//    var result = arr.filter { value in
-//        value %  divisor == 0
-//    }.sorted()
-//    return result.count == 0 ? [-1] : result
-//}
+
+
 /*
  1.제일 작은 수 제거하기
  */
@@ -205,4 +194,26 @@ import Foundation
 //        Int(value)!
 //    }.max()!
 //    return "\(minValue) \(maxValue)"
+//}
+
+/*
+ 정수 내림차순으로 배치하기
+ */
+func solution(_ n:Int64) -> Int64 {
+    var result = ""
+    let nArray = String(n).map { value in
+        String(value)
+    }.map { value in
+        Int(value)!
+    }.sorted(by: >)
+    
+    for i in nArray {
+        result += String(i)
+    }
+    return Int64(result)!
+}
+
+//다른 사람 풀이
+//func solution(_ n:Int64) -> Int64 {
+//    return Int64(String(Array(String(n)).sorted { $0 > $1 }))!
 //}

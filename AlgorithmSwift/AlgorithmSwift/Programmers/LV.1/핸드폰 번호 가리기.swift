@@ -19,3 +19,7 @@ func solution(_ phone_number:String) -> String {
     }
     return result.reduce("", +)
 }
+//다른 사람 풀이
+//func solution(_ phone_number:String) -> String {
+//    return String("\(String(repeating: "*", count: phone_number.count - 4))\(phone_number.suffix(4))")
+//}
