@@ -4,6 +4,32 @@
 ### 문제풀며 공부한 메서드 
 
 <details markdown="1">
+<summary>✅ 지정된 element의 수를 포함하는 Collection 만들기  repeatElement(_:count:) </summary>
+<pre>
+Return Value 
+- Repeated<T> : 모든 element인 카운트 element를 포함하는 컬렉션 값 
+Parameters
+- element: 반복하기 위한 String 값
+- count: 요소를 반복할 횟수 
+
+
+</pre>
+
+``` swift
+let zeroes = repeatElement(0, count: 5)
+for x in zeroes {
+    print(x)
+}
+// 0
+// 0
+// 0
+// 0
+// 0
+```
+
+</details>
+
+<details markdown="1">
 <summary>✅ 문자열 반복하기  String(repeating: String, count: Int) </summary>
 <pre>
 지정된 문자열이 지정된 횟수만큼 반복되어 새 문자열을 만들어내는 메서드
