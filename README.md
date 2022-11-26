@@ -4,6 +4,26 @@
 ### 문제풀며 공부한 메서드 
 
 <details markdown="1">
+<summary>✅ 문자열 반복하기  String(repeating: String, count: Int) </summary>
+<pre>
+지정된 문자열이 지정된 횟수만큼 반복되어 새 문자열을 만들어내는 메서드
+Parameters
+- repeatedValue는 반복하기 위한 String 값
+- count는 repeatedValue를 반복하는 횟수
+
+
+</pre>
+
+``` swift
+let s = String(repeating: "ab", count: 10)
+print(s)
+// Prints "abababababababababab"
+```
+
+</details>
+
+
+<details markdown="1">
 <summary>✅ 컬렉션의 최대 길이까지 서브시퀀스를 반환  suffix(_:), prefix(_:) </summary>
 <pre>
 Array.prefix(_ maxLength: Int)
