@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A59CAB1C28FE25C600E8732F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EFDF2C28F15C610098B29F /* main.swift */; };
-		A5E8581E2923D30C000924A9 /* 약수의 개수와 덧셈.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8581D2923D30C000924A9 /* 약수의 개수와 덧셈.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -54,6 +53,7 @@
 		A55438BB29134AA700349D2D /* 369게임.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "369게임.swift"; sourceTree = "<group>"; };
 		A55438BD2914869500349D2D /* 합성수 찾기.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "합성수 찾기.swift"; sourceTree = "<group>"; };
 		A55438BF2914C1AB00349D2D /* 7의 개수.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "7의 개수.swift"; sourceTree = "<group>"; };
+		A56015992931F10A00ED2079 /* 직사격형 별찍기.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "직사격형 별찍기.swift"; sourceTree = "<group>"; };
 		A560A3FB292285C6006BF8C8 /* 문자열 내 p와 y의 개수 .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "문자열 내 p와 y의 개수 .swift"; sourceTree = "<group>"; };
 		A5611A272906DDCF00AA1AE3 /* 문자열 정렬하기(2).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "문자열 정렬하기(2).swift"; sourceTree = "<group>"; };
 		A5611A292906E59E00AA1AE3 /* 대문자와 소문자.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "대문자와 소문자.swift"; sourceTree = "<group>"; };
@@ -272,6 +272,7 @@
 				A5A0240D292BCB720038AE45 /* 두 정수 사이의 합.swift */,
 				A5A0240F292BCC1E0038AE45 /* 핸드폰 번호 가리기.swift */,
 				A57FFFE0292D248D00135A64 /* 나누어 떨어지는 숫자 배열.swift */,
+				A56015992931F10A00ED2079 /* 직사격형 별찍기.swift */,
 			);
 			path = LV.1;
 			sourceTree = "<group>";
@@ -341,7 +342,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5E8581E2923D30C000924A9 /* 약수의 개수와 덧셈.swift in Sources */,
 				A59CAB1C28FE25C600E8732F /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

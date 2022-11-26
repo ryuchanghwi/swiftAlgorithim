@@ -199,21 +199,56 @@ import Foundation
 /*
  정수 내림차순으로 배치하기
  */
-func solution(_ n:Int64) -> Int64 {
-    var result = ""
-    let nArray = String(n).map { value in
-        String(value)
-    }.map { value in
-        Int(value)!
-    }.sorted(by: >)
-    
-    for i in nArray {
-        result += String(i)
-    }
-    return Int64(result)!
-}
+//func solution(_ n:Int64) -> Int64 {
+//    var result = ""
+//    let nArray = String(n).map { value in
+//        String(value)
+//    }.map { value in
+//        Int(value)!
+//    }.sorted(by: >)
+//
+//    for i in nArray {
+//        result += String(i)
+//    }
+//    return Int64(result)!
+//}
 
 //다른 사람 풀이
 //func solution(_ n:Int64) -> Int64 {
 //    return Int64(String(Array(String(n)).sorted { $0 > $1 }))!
 //}
+
+
+/*
+ 0.가까운 수
+ */
+//func solution(_ array:[Int], _ n:Int) -> Int {
+//    let minusArray = array.map { value in
+//        value - n
+//    }
+//    print(minusArray)
+//    var arrayDic = [Int: Int]()
+//    for i in 0..<array.count {
+//        arrayDic.updateValue(minusArray[i], forKey: array[i])
+//    }
+//    print(arrayDic)
+//    return 0
+//}
+
+/*
+ 1.문자열 다루기 기본
+
+ */
+
+//func solution(_ s:String) -> Bool {
+//    let numArray = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+//    let resultCount = s.filter { value in
+//        numArray.contains(String(value))
+//    }.count
+//    return s.count == resultCount && (resultCount == 4 || resultCount == 6) ? true : false
+//}
+
+//func solution(_ s:String) -> Bool {
+//    return (Int(s) != nil && (s.count == 4 || s.count == 6)) ? true : false
+//}
+
