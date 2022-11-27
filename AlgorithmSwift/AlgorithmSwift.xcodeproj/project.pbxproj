@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A560159C2931FB8200ED2079 /* 직사격형 별찍기.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56015992931F10A00ED2079 /* 직사격형 별찍기.swift */; };
 		A59CAB1C28FE25C600E8732F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EFDF2C28F15C610098B29F /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -102,6 +103,7 @@
 		A5DE3C2C2902E8E000935504 /* n의 배수 고르기 .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "n의 배수 고르기 .swift"; sourceTree = "<group>"; };
 		A5DE3C2E2902F22E00935504 /* 제곱수 판별하기.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "제곱수 판별하기.swift"; sourceTree = "<group>"; };
 		A5DE3C302902F29700935504 /* 숨어있는 숫자의 덧셈(1).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "숨어있는 숫자의 덧셈(1).swift"; sourceTree = "<group>"; };
+		A5E18DF9293357580079DF85 /* 1.제일 작은 수 제거하기.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "1.제일 작은 수 제거하기.swift"; sourceTree = "<group>"; };
 		A5E2B89B29039C7200745E01 /* 쵀댓값 만들기(1).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "쵀댓값 만들기(1).swift"; sourceTree = "<group>"; };
 		A5E2B89D2904254E00745E01 /* 피자 나눠 먹기(1).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "피자 나눠 먹기(1).swift"; sourceTree = "<group>"; };
 		A5E2B89F2904291B00745E01 /* 약수 구하기.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "약수 구하기.swift"; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 				A5A0240F292BCC1E0038AE45 /* 핸드폰 번호 가리기.swift */,
 				A57FFFE0292D248D00135A64 /* 나누어 떨어지는 숫자 배열.swift */,
 				A56015992931F10A00ED2079 /* 직사격형 별찍기.swift */,
+				A5E18DF9293357580079DF85 /* 1.제일 작은 수 제거하기.swift */,
 			);
 			path = LV.1;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A560159C2931FB8200ED2079 /* 직사격형 별찍기.swift in Sources */,
 				A59CAB1C28FE25C600E8732F /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -141,16 +141,7 @@ import Foundation
 
 
 
-/*
- 1.제일 작은 수 제거하기
- */
-//func solution(_ arr:[Int]) -> [Int] {
-//    let miniumValue = arr.sorted()[0]
-//    let miniumIndex = Int(arr.firstIndex { $0 == miniumValue }!)
-//    var arrValue = arr
-//    arrValue.remove(at: miniumIndex)
-//    return arrValue.count == 0 ? [-1] : arrValue
-//}
+
 
 
 /*
@@ -252,3 +243,21 @@ import Foundation
 //    return (Int(s) != nil && (s.count == 4 || s.count == 6)) ? true : false
 //}
 
+/*
+ 0.한 번만 등장한 문자
+ */
+func solution(_ s:String) -> String {
+    var sArray = Array(s.sorted())
+    let sArrayCount = sArray.count
+    var compareArray = [String]()
+    var result = ""
+    print(sArray)
+    for i in sArray {
+        if !compareArray.contains(String(i)) {
+            result += String(i)
+        }
+        compareArray.append(String(i))
+        if 
+    }
+    return result
+}
