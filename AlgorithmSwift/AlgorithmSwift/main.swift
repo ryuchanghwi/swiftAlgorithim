@@ -210,21 +210,12 @@ import Foundation
 //}
 
 
-/*
- 0.가까운 수
- */
-//func solution(_ array:[Int], _ n:Int) -> Int {
-//    let minusArray = array.map { value in
-//        value - n
-//    }
-//    print(minusArray)
-//    var arrayDic = [Int: Int]()
-//    for i in 0..<array.count {
-//        arrayDic.updateValue(minusArray[i], forKey: array[i])
-//    }
-//    print(arrayDic)
-//    return 0
-//}
+
+
+
+
+
+
 
 /*
  1.문자열 다루기 기본
@@ -246,18 +237,19 @@ import Foundation
 /*
  0.한 번만 등장한 문자
  */
-func solution(_ s:String) -> String {
-    var sArray = Array(s.sorted())
-    let sArrayCount = sArray.count
-    var compareArray = [String]()
-    var result = ""
-    print(sArray)
-    for i in sArray {
-        if !compareArray.contains(String(i)) {
-            result += String(i)
-        }
-        compareArray.append(String(i))
-        if 
-    }
-    return result
-}
+//func solution(_ s:String) -> String {
+//    var sArray = Array(s.sorted())
+//    let sArrayCount = sArray.count
+//    var compareArray = [String]()
+//    var result = ""
+//    print(sArray)
+//    for i in sArray {
+//        if !compareArray.contains(String(i)) {
+//            result += String(i)
+//        }
+//        compareArray.append(String(i))
+//        if
+//    }
+//    return result
+//}
+
