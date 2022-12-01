@@ -174,18 +174,6 @@ import Foundation
 //}
 
 
-/*
- 2.최댓값과 최솟값
- */
-//func solution(_ s:String) -> String {
-//    let minValue = s.components(separatedBy: " ").map { value in
-//        Int(value)!
-//    }.min()!
-//    let maxValue = s.components(separatedBy: " ").map { value in
-//        Int(value)!
-//    }.max()!
-//    return "\(minValue) \(maxValue)"
-//}
 
 /*
  정수 내림차순으로 배치하기
@@ -252,3 +240,46 @@ import Foundation
 //    }
 //    return result
 //}
+
+/*
+ 2.예상 대진표
+ 0, 0, 0, A, 0, 0, B, 0 (4, 7) 2 나누기 2, 3.5
+ 0, A, 0, B (2, 4) 2나누기 1, 2
+ A, B (1, 2)
+ 
+ 
+ 0, 0, 0, A, 0, B, 0, 0 (4, 6) 2나누기 2, 3
+ 0, A, B, 0 (2, 3) 2나누기 1, 1.5
+ A, B (1, 2)
+ 
+ 0, 0, A, B (3, 4) 2나누기 1.5, 2
+ 
+ 
+ 0, A, B, 0 (2, 3) 2나누기 1, 1.5
+ 
+ */
+func solution(_ n:Int, _ a:Int, _ b:Int) -> Int {
+    var nValue = n
+    var count = 1
+    var aValue : Double = Double(a)
+    var bValue : Double = Double(b)
+    
+    while true {
+        if nValue == 2 {
+            break
+        }
+        else if abs(aValue - bValue) == 0.5 {
+            break
+        }
+        else {
+            nValue /= 2
+            aValue = round(aValue / 2)
+            bValue = round(bValue / 2)
+        }
+        count += 1
+        print(count)
+    }
+    var answer = 0
+
+    return answer
+}

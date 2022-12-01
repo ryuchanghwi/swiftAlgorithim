@@ -32,3 +32,9 @@ func solution(_ emergency:[Int]) -> [Int] {
     
     return resultArray
 }
+//func solution(_ emergency:[Int]) -> [Int] {
+//    return emergency.map { data in
+//        emergency.filter { $0 > data }.count + 1
+//    }
+//}
+//다른 사람 풀이
