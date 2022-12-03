@@ -140,18 +140,6 @@ import Foundation
 
 
 
-
-
-
-
-/*
- 없는 숫자 더하기
- */
-
-//func solution(_ numbers:[Int]) -> Int {
-//    return (0...9).reduce(0, +) - numbers.reduce(0, +)
-//}
-
 /*
  1. 가운데 글자 가져오기
  */
@@ -222,27 +210,9 @@ import Foundation
 //    return (Int(s) != nil && (s.count == 4 || s.count == 6)) ? true : false
 //}
 
-/*
- 0.한 번만 등장한 문자
- */
-//func solution(_ s:String) -> String {
-//    var sArray = Array(s.sorted())
-//    let sArrayCount = sArray.count
-//    var compareArray = [String]()
-//    var result = ""
-//    print(sArray)
-//    for i in sArray {
-//        if !compareArray.contains(String(i)) {
-//            result += String(i)
-//        }
-//        compareArray.append(String(i))
-//        if
-//    }
-//    return result
-//}
 
 /*
- 2.예상 대진표
+ 2.예상 대진표 (아직 못품)
  0, 0, 0, A, 0, 0, B, 0 (4, 7) 2 나누기 2, 3.5
  0, A, 0, B (2, 4) 2나누기 1, 2
  A, B (1, 2)
@@ -258,28 +228,28 @@ import Foundation
  0, A, B, 0 (2, 3) 2나누기 1, 1.5
  
  */
-func solution(_ n:Int, _ a:Int, _ b:Int) -> Int {
-    var nValue = n
-    var count = 1
-    var aValue : Double = Double(a)
-    var bValue : Double = Double(b)
-    
-    while true {
-        if nValue == 2 {
-            break
-        }
-        else if abs(aValue - bValue) == 0.5 {
-            break
-        }
-        else {
-            nValue /= 2
-            aValue = round(aValue / 2)
-            bValue = round(bValue / 2)
-        }
-        count += 1
-        print(count)
-    }
-    var answer = 0
-
-    return answer
-}
+//func solution(_ n:Int, _ a:Int, _ b:Int) -> Int {
+//    var nValue = n
+//    var count = 1
+//    var aValue : Double = Double(a)
+//    var bValue : Double = Double(b)
+//    
+//    while true {
+//        if nValue == 2 {
+//            break
+//        }
+//        else if abs(aValue - bValue) == 0.5 {
+//            break
+//        }
+//        else {
+//            nValue /= 2
+//            aValue = round(aValue / 2)
+//            bValue = round(bValue / 2)
+//        }
+//        count += 1
+//        print(count)
+//    }
+//    var answer = 0
+//
+//    return answer
+//}
