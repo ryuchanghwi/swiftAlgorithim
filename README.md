@@ -201,6 +201,32 @@ print(bugs)
 
 </details>
 
+<details markdown="1">
+<summary>✅ 조건에 맞는 element 모두 제거 - removeAll(where:) </summary>
+<pre>
+Array.removeAll(where: (조건) )
+- where 조건에서 조건에 맞는 element를 모두 제거함
+
+<br>
+*복잡도*
+removeAll(where:) - O(n)
+</pre>
+
+``` swift
+
+var numbers = [5, 6, 7, 8, 9, 10, 11]
+numbers.removeAll(where: { $0 % 2 != 0 })
+// numbers == [6, 8, 10]
+
+var array = ["hello", "world"]
+array.removeAll { value in
+  return value == "hello"
+}
+// array is now ["world"]
+
+```
+
+</details>
 
 <details markdown="1">
 <summary>✅ 배열의 첫 번째 요소 삭제 - removeFirst() , 배열의 마지막 요소 삭제 - removeLast() </summary>
