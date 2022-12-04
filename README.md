@@ -201,6 +201,32 @@ print(bugs)
 
 </details>
 
+<details markdown="1">
+<summary>✅ 조건에 맞는 element 모두 제거 - removeAll(where:) </summary>
+<pre>
+Array.removeAll(where: (조건) )
+- where 조건에서 조건에 맞는 element를 모두 제거함
+
+<br>
+*복잡도*
+removeAll(where:) - O(n)
+</pre>
+
+``` swift
+
+var numbers = [5, 6, 7, 8, 9, 10, 11]
+numbers.removeAll(where: { $0 % 2 != 0 })
+// numbers == [6, 8, 10]
+
+var array = ["hello", "world"]
+array.removeAll { value in
+  return value == "hello"
+}
+// array is now ["world"]
+
+```
+
+</details>
 
 <details markdown="1">
 <summary>✅ 배열의 첫 번째 요소 삭제 - removeFirst() , 배열의 마지막 요소 삭제 - removeLast() </summary>
@@ -255,6 +281,7 @@ print(cafe.uppercased())
 ### 문제 풀이 한줄 기록
 |   Day   |    푼 문제    |   What I Learned   |
 | ------ | ---- |----------- |
+| 22.12.04 | 1.한 번만 겹치는 문자 | 1. 완전 탐색 후 겹치는 문제 빈 배열에 담기, removeAll을 통해 해당 문자  |
 | 22.12.03 | 1.없는 숫자 더하기 | 1. 0부터 9까지 reduce 고차함수를 사용해 더하고 없는 수 배열을 reduce 함수로 더한 후 둘을   |
 | 22.12.02 | 1.최댓값과 최솟값 | 1. min(), max() 메서드를 통해 배열 중 큰 값과 작은 값   |
 | 22.12.01 | 1.진료 순서 정하기 | 1. 2중 for 문을 통해, 인덱스 구하기  |
