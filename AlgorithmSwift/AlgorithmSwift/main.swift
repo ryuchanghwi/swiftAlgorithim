@@ -253,3 +253,30 @@ import Foundation
 //
 //    return answer
 //}
+
+/*
+ 2.올바른 괄호
+ */
+func solution(_ s:String) -> Bool
+{
+    var leftCount = 0 // )
+    var rightCount = 0 // (
+    var result = true
+    for i in s {
+        if i == "(" {
+            rightCount += 1
+        }
+        else {
+            leftCount += 1
+        }
+        
+        if leftCount > rightCount {
+            result = false
+        }
+    }
+    if leftCount != rightCount {
+        result = false
+    }
+
+    return result
+}
