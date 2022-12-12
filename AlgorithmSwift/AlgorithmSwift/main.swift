@@ -228,17 +228,21 @@ import Foundation
 //    return answer
 //}
 
-
-
-func solution(_ A:[Int], _ B:[Int]) -> Int
-{
-    var ans = 0
-    let sortedA = A.sorted()
-    let sortedB = B.sorted(by: >)
-    
-    for i in 0..<A.count {
-        ans += sortedA[i] * sortedB[i]
+/*
+ 0.직사각형 넓이 구하기
+ */
+func solution(_ dots:[[Int]]) -> Int {
+    var width = 0
+    var widthArray = [Int]()
+    var height = 0
+    var heightArray = [Int]()
+    for i in dots {
+        widthArray.append(i[0])
+        heightArray.append(i[1])
     }
-    
-    return ans
+    let sortedWidthdArray = widthArray.sorted()
+    let sortedHeightArray = heightArray.sorted()
+    width = sortedWidthdArray.last! - sortedWidthdArray.first!
+    height = sortedHeightArray.last! - sortedHeightArray.first!
+    return width * height
 }
