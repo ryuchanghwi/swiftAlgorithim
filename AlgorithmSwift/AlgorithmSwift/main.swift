@@ -228,21 +228,82 @@ import Foundation
 //    return answer
 //}
 
+
 /*
- 0.직사각형 넓이 구하기
+ 0. 치킨 쿠폰
+ 
+ 100 -> 10
+ 10 -> 1
+ 
+ result = 108 + 10
+ 1081 -> 108
+ 108 -> 10
+ 10 -> 1
+ 1 + 8 + 1
+ 
  */
-func solution(_ dots:[[Int]]) -> Int {
-    var width = 0
-    var widthArray = [Int]()
-    var height = 0
-    var heightArray = [Int]()
-    for i in dots {
-        widthArray.append(i[0])
-        heightArray.append(i[1])
-    }
-    let sortedWidthdArray = widthArray.sorted()
-    let sortedHeightArray = heightArray.sorted()
-    width = sortedWidthdArray.last! - sortedWidthdArray.first!
-    height = sortedHeightArray.last! - sortedHeightArray.first!
-    return width * height
+
+//func solution(_ chicken:Int) -> Int {
+//    var result = 0
+//    var rest = 0
+//    var chickenCount = chicken
+//    var plusCoupon = 0
+//    while true {
+//        if chickenCount / 10 == 0 {
+//            break
+//        }
+//        rest += chickenCount % 10
+//        chickenCount = chickenCount / 10
+//        result += chickenCount
+//        if chickenCount < 10 {
+//            rest += chickenCount
+//        }
+//        if rest >= 10 {
+//            plusCoupon += 1
+//            result += 1
+//            rest -= 10
+//        }
+//        if (plusCoupon + rest) / 10 == 1 {
+//            result += 1
+//        }
+//        print(result, rest)
+//    }
+//    return result
+//}
+
+/*
+ 1.콜라 문제
+ */
+//func solution(_ a:Int, _ b:Int, _ n:Int) -> Int {
+//    var nValue = n
+//    var result = 0
+//    var rest = 0
+//    var restPlus = 0
+//    while true {
+//        if nValue / a == 0 {
+//            break
+//        }
+//        result += nValue / a
+//        rest += nValue % a
+//
+//    }
+//    while true {
+//        if rest / a == 0 {
+//            break
+//        }
+//        result += rest / a
+//        restPlus += rest % a
+//        if restPlus > a {
+//            result += 1
+//        }
+//    }
+//    return result
+//}
+
+
+/*
+ 0. 종이 자르기
+ */
+func solution(_ M:Int, _ N:Int) -> Int {
+    return M * N - 1
 }
