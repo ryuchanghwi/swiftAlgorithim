@@ -243,6 +243,7 @@ import Foundation
  
  */
 
+
 //func solution(_ chicken:Int) -> Int {
 //    var result = 0
 //    var rest = 0
@@ -263,47 +264,56 @@ import Foundation
 //            result += 1
 //            rest -= 10
 //        }
-//        if (plusCoupon + rest) / 10 == 1 {
-//            result += 1
+//        if (plusCoupon + rest) / 10 > 0 {
+//            result += (plusCoupon + rest) / 10
 //        }
 //        print(result, rest)
 //    }
 //    return result
 //}
 
+
 /*
  1.콜라 문제
  */
-//func solution(_ a:Int, _ b:Int, _ n:Int) -> Int {
-//    var nValue = n
-//    var result = 0
-//    var rest = 0
-//    var restPlus = 0
-//    while true {
-//        if nValue / a == 0 {
-//            break
-//        }
-//        result += nValue / a
-//        rest += nValue % a
-//
-//    }
-//    while true {
-//        if rest / a == 0 {
-//            break
-//        }
-//        result += rest / a
-//        restPlus += rest % a
-//        if restPlus > a {
-//            result += 1
-//        }
-//    }
-//    return result
-//}
+func solution(_ a:Int, _ b:Int, _ n:Int) -> Int {
+    var nValue = n
+    var result = 0
+    var rest = 0
+    var restPlus = 0
+    while true {
+        if nValue / a == 0 {
+            break
+        }                   //20, 10, 5, 2
+        rest += nValue % a // 0, 0, 1, 0
+        nValue = nValue / a //10, 5, 2, 1
+        result += nValue // 10 + 5 + 2 + 1
+        if nValue < a { // 나머지 1
+            rest += nValue //rest + 1 / = 1
+        }
+        if rest >= a { //2
+            restPlus += b
+            result += 1
+            rest -= a
+        }
+        var totalRest = restPlus + rest
+        if totalRest / a > 0 {
+            while true {
+                if totalRest / a == 0 {
+                    break
+                }
+                result += totalRest / a
+                var test = totalRest / a
+                totalRest = test
+                if totalRest / a >= a {
+                    result += 1
+                }
+            }
 
+        }
+    }
 
-/*
- 0. 종이 자르기
- */
-func solution(_ M:Int, _ N:Int) -> Int {
-    return M * N - 1
+    return result
 }
+
+
