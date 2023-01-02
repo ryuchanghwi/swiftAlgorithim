@@ -180,7 +180,7 @@ import Foundation
 //            bValue = round(bValue / 2)
 //        }
 //        count += 1
-//        print(count)
+//        print(count)https://www.spotvnow.co.kr/
 //    }
 //    var answer = 0
 //
@@ -235,44 +235,46 @@ import Foundation
 /*
  1.콜라 문제
  */
-func solution(_ a:Int, _ b:Int, _ n:Int) -> Int {
-    var nValue = n
-    var result = 0
-    var rest = 0
-    var restPlus = 0
-    while true {
-        if nValue / a == 0 {
-            break
-        }                   //20, 10, 5, 2
-        rest += nValue % a // 0, 0, 1, 0
-        nValue = nValue / a //10, 5, 2, 1
-        result += nValue // 10 + 5 + 2 + 1
-        if nValue < a { // 나머지 1
-            rest += nValue //rest + 1 / = 1
-        }
-        if rest >= a { //2
-            restPlus += b
-            result += 1
-            rest -= a
-        }
-        var totalRest = restPlus + rest
-        if totalRest / a > 0 {
-            while true {
-                if totalRest / a == 0 {
-                    break
-                }
-                result += totalRest / a
-                var test = totalRest / a
-                totalRest = test
-                if totalRest / a >= a {
-                    result += 1
-                }
-            }
-
-        }
-    }
-
-    return result
-}
+//func solution(_ a:Int, _ b:Int, _ n:Int) -> Int {
+//    var nValue = n
+//    var result = 0
+//    var rest = 0
+//    var restPlus = 0
+//    while true {
+//        if nValue / a == 0 {
+//            break
+//        }                   //20, 10, 5, 2
+//        rest += nValue % a // 0, 0, 1, 0
+//        nValue = nValue / a //10, 5, 2, 1
+//        result += nValue // 10 + 5 + 2 + 1
+//        if nValue < a { // 나머지 1
+//            rest += nValue //rest + 1 / = 1
+//        }
+//        if rest >= a { //2
+//            restPlus += b
+//            result += 1
+//            rest -= a
+//        }
+//        var totalRest = restPlus + rest
+//        if totalRest / a > 0 {
+//            while true {
+//                if totalRest / a == 0 {
+//                    break
+//                }
+//                result += totalRest / a
+//                var test = totalRest / a
+//                totalRest = test
+//                if totalRest / a >= a {
+//                    result += 1
+//                }
+//            }
+//
+//        }
+//    }
+//
+//    return result
+//}
+//
+//
 
 
