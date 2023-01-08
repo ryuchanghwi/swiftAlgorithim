@@ -278,28 +278,29 @@ import Foundation
 //
 
 
-//0 문자열 밀기
-func solution(_ A:String, _ B:String) -> Int {
-    var aValue = Array(A)
-    let bValue = Array(B)
-    let aCount = aValue.count
-    var result = 0
-    for _ in 1...aValue.count {
-        if aValue == bValue {
-            break
-        }
-        else {
-            aValue.insert(aValue[aCount - 1], at: 0)
-            aValue.remove(at: aCount)
-            result += 1
+//0 외계어 사전
+func solution(_ spell:[String], _ dic:[String]) -> Int {
+    var containsResult : Bool = false
+    dic.map { dicValue in
+        var spellValue = spell
+        for i in 0..<spell.count {
+            if dicValue.contains(spell[i]) {
+                print("포함", spellValue[i])
+                spellValue.remove(at: i)
+                print("삭제되었나", spellValue)
+                print(spellValue.count)
+                if spellValue.count == 0 {
+                    print("다 포함")
+                    containsResult = true
+                    break
+                }
+                else {
+                    containsResult = false
+                }
+            }
         }
     }
-    if result == aValue.count {
-        result = -1
-    }
-    return result
+    return containsResult == true ? 2 : 1
 }
-//func solution(_ A:String, _ B:String) -> Int {
-//    let arr = (A+A).components(separatedBy: B)
-//    return arr.count == 1 ? -1 : arr[1].count
-//}
+
+solution(["p", "o", "s"], ["sod", "eocd", "qixm", "adio", "soo"])
