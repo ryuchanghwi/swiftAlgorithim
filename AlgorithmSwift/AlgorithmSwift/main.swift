@@ -278,29 +278,60 @@ import Foundation
 //
 
 
-//0 외계어 사전
-func solution(_ spell:[String], _ dic:[String]) -> Int {
-    var containsResult : Bool = false
-    dic.map { dicValue in
-        var spellValue = spell
-        for i in 0..<spell.count {
-            if dicValue.contains(spell[i]) {
-                print("포함", spellValue[i])
-                spellValue.remove(at: i)
-                print("삭제되었나", spellValue)
-                print(spellValue.count)
-                if spellValue.count == 0 {
-                    print("다 포함")
-                    containsResult = true
-                    break
-                }
-                else {
-                    containsResult = false
-                }
-            }
-        }
-    }
-    return containsResult == true ? 2 : 1
-}
+//0 외계어 사전 아직 못품
+//func solution(_ spell:[String], _ dic:[String]) -> Int {
+//    var containsResult : Bool = false
+//    dic.map { dicValue in
+//        var spellValue = spell
+//        for i in 0..<spell.count {
+//            if dicValue.contains(spell[i]) {
+//                print("포함", spellValue[i])
+//                spellValue.remove(at: i)
+//                print("삭제되었나", spellValue)
+//                print(spellValue.count)
+//                if spellValue.count == 0 {
+//                    print("다 포함")
+//                    containsResult = true
+//                    break
+//                }
+//                else {
+//                    containsResult = false
+//                }
+//            }
+//        }
+//    }
+//    return containsResult == true ? 2 : 1
+//}
 
-solution(["p", "o", "s"], ["sod", "eocd", "qixm", "adio", "soo"])
+
+//0 구슬을 나누는 경우의 수
+func solution(_ balls:Int, _ share:Int) -> Int {
+    var nValue = [Int]()
+    var mValue = [Int]()
+    var nMinusMValue = [Int]()
+    var nMinusMFacValue = 1
+    var multiplyValue = 1
+    for i in 1...balls {
+        nValue.append(i)
+    }
+    for i in 1...share {
+        mValue.append(i)
+    }
+    nMinusMValue = nValue.filter{!mValue.contains($0)}
+    
+    for i in nMinusMValue {
+        multiplyValue *= i
+    }
+    for i in 1...(balls - share) {
+        nMinusMFacValue *= i
+    }
+    print(multiplyValue)
+    return balls == share ? 1 : multiplyValue / nMinusMFacValue
+}
+solution(5, 3)
+/*
+ n 3 - 3 2 1
+ m 2 - 2 1
+ ///공통인 수를 나열하고 그걸 지우고 곱하기..?
+ */
+//array1.filter{!array2.contains($0)}
