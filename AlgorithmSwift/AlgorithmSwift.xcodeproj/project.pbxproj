@@ -39,6 +39,9 @@
 		A511CFE72A8F5AB5008CE46C /* 최빈값 구하기.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "최빈값 구하기.swift"; sourceTree = "<group>"; };
 		A511CFE92A8FCB58008CE46C /* 공 던지기.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "공 던지기.swift"; sourceTree = "<group>"; };
 		A511CFEB2A8FD944008CE46C /* 구슬을 나누는 경우의 수.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "구슬을 나누는 경우의 수.swift"; sourceTree = "<group>"; };
+		A511CFED2A90E395008CE46C /* 짝지어 제거하기.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "짝지어 제거하기.swift"; sourceTree = "<group>"; };
+		A511CFEF2A90EB35008CE46C /* 예상 대진표.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "예상 대진표.swift"; sourceTree = "<group>"; };
+		A511CFF32A911B80008CE46C /* 문자열 바꿔 찾기.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "문자열 바꿔 찾기.swift"; sourceTree = "<group>"; };
 		A512740D29365220002FA576 /* 가까운 수.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "가까운 수.swift"; sourceTree = "<group>"; };
 		A51AF64B290ED77A00B17127 /* 인덱스 바꾸기.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "인덱스 바꾸기.swift"; sourceTree = "<group>"; };
 		A51AF67329100A7C00B17127 /* 컨트롤 제트.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "컨트롤 제트.swift"; sourceTree = "<group>"; };
@@ -324,6 +327,7 @@
 				A511CFE72A8F5AB5008CE46C /* 최빈값 구하기.swift */,
 				A511CFE92A8FCB58008CE46C /* 공 던지기.swift */,
 				A511CFEB2A8FD944008CE46C /* 구슬을 나누는 경우의 수.swift */,
+				A511CFF32A911B80008CE46C /* 문자열 바꿔 찾기.swift */,
 			);
 			path = LV.0;
 			sourceTree = "<group>";
@@ -376,6 +380,8 @@
 				A5954B3E293D7B6600EC893D /* 올바른 괄호.swift */,
 				A5C50F642944E27F00FB2ACB /* 최솟값 만들기.swift */,
 				A511CFE02A84C442008CE46C /* 카펫.swift */,
+				A511CFED2A90E395008CE46C /* 짝지어 제거하기.swift */,
+				A511CFEF2A90EB35008CE46C /* 예상 대진표.swift */,
 			);
 			path = LV.2;
 			sourceTree = "<group>";
