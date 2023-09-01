@@ -5,8 +5,6 @@
 //  Created by 류창휘 on 2023/08/30.
 //
 
-import Foundation
-
 let n = Int(readLine()!)!
 
 for _ in 0..<n {
@@ -57,8 +55,8 @@ for _ in 0..<n {
                     let fifo = queue.removeFirst()
                     
                     // 현재 좌표
-                    let x = fifo[0]
-                    let y = fifo[1]
+                    let y = fifo[0]
+                    let x = fifo[1]
                     
                     // 도달 가능 좌표
                     for i in 0..<4 {
@@ -66,12 +64,12 @@ for _ in 0..<n {
                         let ny = y + dy[i]
                         
                         // range를 벗어나면 안돼 - 0보다 커야함, 갯수보다 작아야함
-                        if nx >= 0 && ny >= 0 && nx < n && ny < m {
+                        if nx >= 0 && ny >= 0 && nx < m && ny < n {
                             
                             // 도달 가능 좌표 역시 방문하지 않아야 하고, 배추가 있어야 함
-                            if check[nx][ny] == false && arr[nx][ny] == 1 {
-                                check[nx][ny] = true
-                                queue.append([nx, ny])
+                            if check[ny][nx] == false && arr[ny][nx] == 1 {
+                                check[ny][nx] = true
+                                queue.append([ny, nx])
                                 
                             }
                         }
