@@ -5,34 +5,90 @@
 //  Created by 류창휘 on 2022/10/08.
 //
 
-let inputData = readLine()!.split(separator: " ").map { Int($0)! } // 첫 줄 받기
-
-let N = inputData[0] // 스크린의 칸
-let M = inputData[1] // 바구니의 칸(너비)
-
-let appleCount = Int(readLine()!)! // 떨어지는 사과 갯수
+import Foundation
 
 
 /*
-너비에 따라서 만든 바구니
+ 3가지 조건
+ 1. 모음을 반드시 하나 포함해야 함
+ 2. 모음이 3개 혹은 자음이 3개 연속으로 오면 안된다.
+ 3. 갈은 글자가 연속으로 2번오면 안된다. but ee, oo는 혀용
  */
-var basket = Array(1...M)
 
-var result = 0 // 결과 값
 
-for _ in 0..<appleCount {
-    let location = Int(readLine()!)! //떨어지는 사과의 위치
-    
-    while !basket.contains(location) {
-        result += 1 // 이동에 따른 카운트
-        // 우측으로 이동해야 하는 경우
-        if basket.max()! < location {
-            basket = basket.map { $0 + 1 } // 바구니를 값을 전체적으로 + 1로 해서 이동
-        }
-        // 좌측으로 이동해야 하는 경우
-        else if basket.min()! > location {
-            basket = basket.map { $0 - 1 } // 바구니를 값을 전체적으로 - 1로 해서 이동
+var word = String(readLine()!)
+
+
+var vowels: [String] = ["a", "e", "i", "o", "u"]
+
+func vowelsCheck(wordArr: [String]) -> Bool {
+    var result = 0
+    for i in vowels {
+        let count = wordArr.filter { i == $0 }.count
+        if count >= 1 {
+            result += 1
         }
     }
+    return result == 0 ? false : true
 }
-print(result)
+
+func vowelsContinuesCheck(wordArr: [String]) -> Bool {
+    var vowelsContinuesCount = 0
+    var notVowelsContinuesCount = 0
+
+    for i in 0..<wordArr.count {
+        if vowels.contains(wordArr[i]) {
+            vowelsContinuesCount += 1
+            notVowelsContinuesCount = 0
+//            print(vowelsContinuesCount, notVowelsContinuesCount)
+            if vowelsContinuesCount >= 3 || notVowelsContinuesCount >= 3 {
+                break
+            }
+        }
+        else if !vowels.contains(wordArr[i]) {
+            vowelsContinuesCount = 0
+            notVowelsContinuesCount += 1
+//            print(vowelsContinuesCount, notVowelsContinuesCount)
+            if vowelsContinuesCount >= 3 || notVowelsContinuesCount >= 3 {
+                break
+            }
+        }
+    }
+    return vowelsContinuesCount >= 3 || notVowelsContinuesCount >= 3 ? false : true
+}
+
+func sameAlphabetCheck(wordArr: [String]) -> Bool {
+    var stack = [String]()
+    var result = true
+
+    for i in 0..<wordArr.count {
+        if let last = stack.last {
+            if last == wordArr[i] {
+                result = false
+                break
+            }
+        }
+        if wordArr[i] == "e" || wordArr[i] == "o" {
+            continue
+        }
+        stack.append(wordArr[i])
+    }
+    return result
+}
+
+while word != "end" {
+    let wordArr = word.map { String($0) }
+    let vowelResult  = vowelsCheck(wordArr: wordArr)
+    let continuesVowelResult = vowelsContinuesCheck(wordArr: wordArr)
+    let sameWordResult = sameAlphabetCheck(wordArr: wordArr)
+
+    if vowelResult && continuesVowelResult && sameWordResult {
+        print("<\(word)> is acceptable.")
+    }
+    else {
+        print("<\(word)> is not acceptable.")
+    }
+
+
+    word = String(readLine()!)
+}

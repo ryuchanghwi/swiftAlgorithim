@@ -110,7 +110,7 @@ for _ in 0..<k {
 let dx = [-1, 1, 0, 0] // 상하좌우
 let dy = [0, 0, -1, 1]
 
-// dfs
+// dfs - 재귀?
  func dfs(_ x: Int, _ y: Int) {
      for i in 0..<dx.count { // 도달 가능 좌표를 확인하기 위한 for 문
          let nx = x + dx[i]

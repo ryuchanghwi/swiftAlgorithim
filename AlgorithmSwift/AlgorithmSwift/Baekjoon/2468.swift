@@ -81,7 +81,7 @@ func bfs(safeAreaValue: [[Int]]) -> Int {
  가령 모든 안전영역의 높이가 같을 때의 결과는 1
  그치만 결과는 0이 나옴 때문에 초깃값을 1로 수정
  */
-var result = 0
+var result = 1
 
 
 for value in minValue...maxValue {
@@ -92,3 +92,7 @@ for value in minValue...maxValue {
     result = max(bfs(safeAreaValue: tempSaveArea), result)
 }
 print(result)
+
+
+// dfs - 영역
+// bfs - 최소 거리
