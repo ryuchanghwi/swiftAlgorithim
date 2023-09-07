@@ -43,24 +43,71 @@ import Foundation
 
 
 
-import Foundation
+//import Foundation
+//
+//let n = Int(readLine()!)!
+//
+//var arr: [String] = []
+//for _ in 0..<n {
+//    let input = readLine()!.split { !$0.isNumber }.map { char -> String in
+//        if let num = Int(char) {
+//            return String(num)
+//        } else {
+//            return String(char.drop { $0 == "0" })
+//        }
+//    }
+//    arr.append(contentsOf: input)
+//}
+//arr.sort { ($0.count, $0) < ($1.count, $1) }
+//let stringAr = arr.map { Int($0)! }.sorted(by: <)
+//
+//for num in arr {
+//    print(num)
+//}
 
-let n = Int(readLine()!)!
+var n = Int(readLine()!)!
+var v = [String]()
+var s = ""
+var ret = ""
 
-var arr: [String] = []
-for _ in 0..<n {
-    let input = readLine()!.split { !$0.isNumber }.map { char -> String in
-        if let num = Int(char) {
-            return String(num)
+func go() {
+    while true {
+        if ret.count > 0 && ret.first == "0" {
+            ret.removeFirst()
         } else {
-            return String(char.drop { $0 == "0" })
+            break
         }
     }
-    arr.append(contentsOf: input)
+    if ret.isEmpty {
+        ret = "0"
+    }
+    v.append(ret)
+    ret = ""
 }
-arr.sort { ($0.count, $0) < ($1.count, $1) }
-let stringAr = arr.map { Int($0)! }.sorted(by: <)
 
-for num in arr {
-    print(num)
+func cmp(_ a: String, _ b: String) -> Bool {
+    if a.count == b.count {
+        return a < b
+    }
+    return a.count < b.count
+}
+
+for _ in 0..<n {
+    s = readLine()!
+    ret = ""
+    for char in s {
+        if char.isNumber {
+            ret += String(char)
+        } else if !ret.isEmpty {
+            go()
+        }
+    }
+    if !ret.isEmpty {
+        go()
+    }
+}
+
+v.sort(by: cmp)
+for i in v {
+    print(i)
 }
