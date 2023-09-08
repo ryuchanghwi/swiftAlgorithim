@@ -10,7 +10,6 @@ var input = ""
 
 
 while true {
-
     var stack = [Character]()
     input = readLine()!
     if input == "." {
@@ -24,9 +23,6 @@ while true {
         else if i == "(" {
             stack.append(i)
         }
-
-
-
         else if i == "]" {
             if stack.isEmpty || stack.last! != "[" {
                 result = "no"
