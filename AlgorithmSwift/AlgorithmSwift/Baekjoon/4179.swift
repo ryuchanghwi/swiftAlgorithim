@@ -7,159 +7,159 @@
 
 import Foundation
 
-//let input = readLine()!.split(separator: " ").map { Int($0)! }
-//
-//let R = input[0] // 행
-//let C = input[1] // 열
-//
-////지훈이 위치
-//var JLocation = [Int]()
-//
-////불 위치
-//var FLocation = [Int]()
-//
-//
-////미로 만들기
-//var maze = [[String]]()
-//
-//for i in 0..<R {
-//    let line = readLine()!.map { String($0) }
-//    maze.append(line)
-//
-//    for j in 0..<C {
-//        if maze[i][j] == "J" {
-//            JLocation = [i, j]
-//        }
-//        else if maze[i][j] == "F" {
-//            FLocation = [i, j]
-//        }
-//    }
-//}
-//
-////탈출 가능 좌표 구하기
-//var escapingLocation = [[Int]]()
-//
-//
-//let dx = [1, -1, 0, 0]
-//let dy = [0, 0, -1, 1]
-//
-//for i in 0..<maze.count {
-//    for j in 0..<maze[i].count {
-//        if (i == 0 || j == 0) || (i == maze.count - 1 || j == maze[i].count - 1) {
-//            escapingLocation.append([i, j])
-//            if maze[i][j] == "#" {
-////                print(i, j ,"아이제이")
-//                escapingLocation.removeLast()
-//            }
-//        }
-//    }
-//}
-//
-////print(escapingLocation, "?도망")
-//
-//func bfs() -> Int {
-//
-//    var count = 1
-//
-//    var checkArray = Array(repeating: Array(repeating: false, count: C), count: R)
-//
-//    var fQueue = [[Int]]()
-//    fQueue.append(FLocation)
-//
-//    var jQueue = [[Int]]()
-//    jQueue.append(JLocation)
-//
-////    print(fQueue, jQueue, "큐")
-//
-//
-//    while !fQueue.isEmpty && !jQueue.isEmpty  {
-//        let fFifo = fQueue.removeFirst()
-//
-//        let fY = fFifo[0]
-//        let fX = fFifo[1]
-//
-//        checkArray[fY][fX] = true
-//
-//
-//        for i in 0..<4 {
-//            let ny = fY + dy[i]
-//            let nx = fX + dx[i]
-//
-//            if nx >= 0 && ny >= 0 && nx < C && ny < R {
-//                if checkArray[ny][nx] == false && (maze[ny][nx] == "." || maze[ny][nx] == "J") {
-//                    checkArray[ny][nx] = true
-//                    fQueue.append([ny, nx])
-//                    maze[ny][nx] = "F"
-//                }
-//            }
-//        }
-//
-//        let jFifo = jQueue.removeFirst()
-//
-//        let jY = jFifo[0]
-//        let jX = jFifo[1]
-//
-//        checkArray[jY][jX] = true
-//
-//        for i in 0..<4 {
-//            let ny = jY + dy[i]
-//            let nx = jX + dx[i]
-//
-//            if nx >= 0 && ny >= 0 && nx < C && ny < R {
-//                if checkArray[ny][nx] == false && maze[ny][nx] == "." {
-//                    checkArray[ny][nx] = true
-//                    jQueue.append([ny, nx])
-//                    maze[ny][nx] = "J"
-//                }
-//            }
-//        }
-//
-////        print(maze, "??")
-//        var stop = false
-//        for i in 0..<escapingLocation.count {
-//            if maze[escapingLocation[i][0]][escapingLocation[i][1]] == "J" {
-//                stop = true
-//            }
-//        }
-//        count += 1
-////        print(count, "카운트")
-////        print(maze, "지도")
-//        if stop {
-//            break
-//        }
-//    }
-//
-//    var impossibleCheck = false
-//    for i in 0..<escapingLocation.count {
-//        if maze[escapingLocation[i][0]][escapingLocation[i][1]] != "J" {
-//            impossibleCheck = false
-//        }
-//        else if maze[escapingLocation[i][0]][escapingLocation[i][1]] == "J" {
-//            impossibleCheck = true
-//            break
-//        }
-//    }
-//
-//    return impossibleCheck == false ? 0 : count
-////    return count
-//}
-////print(escapingLocation, "???????")
-//if escapingLocation.contains(JLocation) {
-//    print(1)
-//}
-//else if R == 1 && C == 1 {
-//    print("IMPOSSIBLE")
-//}
-//else {
-//    let result = bfs()
-//    if result == 0 {
-//        print("IMPOSSIBLE")
-//    }
-//    else {
-//        print(result)
-//    }
-//}
-//
+let input = readLine()!.split(separator: " ").map { Int($0)! }
+
+let R = input[0] // 행
+let C = input[1] // 열
+
+//지훈이 위치
+var JLocation = [Int]()
+
+//불 위치
+var FLocation = [Int]()
+
+
+//미로 만들기
+var maze = [[String]]()
+
+for i in 0..<R {
+    let line = readLine()!.map { String($0) }
+    maze.append(line)
+
+    for j in 0..<C {
+        if maze[i][j] == "J" {
+            JLocation = [i, j]
+        }
+        else if maze[i][j] == "F" {
+            FLocation = [i, j]
+        }
+    }
+}
+
+//탈출 가능 좌표 구하기
+var escapingLocation = [[Int]]()
+
+
+let dx = [1, -1, 0, 0]
+let dy = [0, 0, -1, 1]
+
+for i in 0..<maze.count {
+    for j in 0..<maze[i].count {
+        if (i == 0 || j == 0) || (i == maze.count - 1 || j == maze[i].count - 1) {
+            escapingLocation.append([i, j])
+            if maze[i][j] == "#" {
+//                print(i, j ,"아이제이")
+                escapingLocation.removeLast()
+            }
+        }
+    }
+}
+
+//print(escapingLocation, "?도망")
+
+func bfs() -> Int {
+
+    var count = 1
+
+    var checkArray = Array(repeating: Array(repeating: false, count: C), count: R)
+
+    var fQueue = [[Int]]()
+    fQueue.append(FLocation)
+
+    var jQueue = [[Int]]()
+    jQueue.append(JLocation)
+
+//    print(fQueue, jQueue, "큐")
+
+
+    while !fQueue.isEmpty && !jQueue.isEmpty  {
+        let fFifo = fQueue.removeFirst()
+
+        let fY = fFifo[0]
+        let fX = fFifo[1]
+
+        checkArray[fY][fX] = true
+
+
+        for i in 0..<4 {
+            let ny = fY + dy[i]
+            let nx = fX + dx[i]
+
+            if nx >= 0 && ny >= 0 && nx < C && ny < R {
+                if checkArray[ny][nx] == false && (maze[ny][nx] == "." || maze[ny][nx] == "J") {
+                    checkArray[ny][nx] = true
+                    fQueue.append([ny, nx])
+                    maze[ny][nx] = "F"
+                }
+            }
+        }
+
+        let jFifo = jQueue.removeFirst()
+
+        let jY = jFifo[0]
+        let jX = jFifo[1]
+
+        checkArray[jY][jX] = true
+
+        for i in 0..<4 {
+            let ny = jY + dy[i]
+            let nx = jX + dx[i]
+
+            if nx >= 0 && ny >= 0 && nx < C && ny < R {
+                if checkArray[ny][nx] == false && maze[ny][nx] == "." {
+                    checkArray[ny][nx] = true
+                    jQueue.append([ny, nx])
+                    maze[ny][nx] = "J"
+                }
+            }
+        }
+
+//        print(maze, "??")
+        var stop = false
+        for i in 0..<escapingLocation.count {
+            if maze[escapingLocation[i][0]][escapingLocation[i][1]] == "J" {
+                stop = true
+            }
+        }
+        count += 1
+//        print(count, "카운트")
+//        print(maze, "지도")
+        if stop {
+            break
+        }
+    }
+
+    var impossibleCheck = false
+    for i in 0..<escapingLocation.count {
+        if maze[escapingLocation[i][0]][escapingLocation[i][1]] != "J" {
+            impossibleCheck = false
+        }
+        else if maze[escapingLocation[i][0]][escapingLocation[i][1]] == "J" {
+            impossibleCheck = true
+            break
+        }
+    }
+
+    return impossibleCheck == false ? 0 : count
+//    return count
+}
+//print(escapingLocation, "???????")
+if escapingLocation.contains(JLocation) {
+    print(1)
+}
+else if R == 1 && C == 1 {
+    print("IMPOSSIBLE")
+}
+else {
+    let result = bfs()
+    if result == 0 {
+        print("IMPOSSIBLE")
+    }
+    else {
+        print(result)
+    }
+}
+
 
 /*
  예외 조건
