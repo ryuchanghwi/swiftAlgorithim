@@ -27,27 +27,3 @@ import Foundation
 //}
 
 //import Foundation
-//func solution(_ n:Int, _ m:Int, _ section:[Int]) -> Int {
-//    var check = Array(repeating: true, count: n + 1)
-//    for i in 0..<n+1 {
-//        if section.contains(i) {
-//            check[i] = false
-//        }
-//    }
-//    var count = 0
-//    for i in 0..<check.count {
-//        if check[i] == false {
-//            count += 1
-//            for j in 0..<m {
-//                if i + j < check.count {
-//                    if check[i + j] == false {
-//                                            check[i + j] = true
-//                    }
-//                }
-//            }
-//        }
-//    }
-//    
-//    
-//    return count
-//}
